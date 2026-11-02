@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ross Goodburn | Candidate Portfolio | Snyk Channel Manager UK&I</title>
+  
+  <!-- Inter & JetBrains Mono Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            snyk: {
+              purple: '#5420e6',
+              purpleHover: '#4416c2',
+              purpleLight: '#794cf7',
+              darkBg: '#090d16',
+              cardBg: '#101626',
+              cardBorder: '#1e293b',
+              accentCyan: '#06b6d4',
+              accentEmerald: '#10b981',
+              textMuted: '#94a3b8'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom glow effects & scrollbar */
+    body {
+      background-color: #090d16;
+      color: #f1f5f9;
+      font-family: 'Inter', sans-serif;
+    }
+    .purple-glow {
+      box-shadow: 0 0 40px -10px rgba(84, 32, 230, 0.45);
+    }
+    .cyan-glow {
+      box-shadow: 0 0 35px -10px rgba(6, 182, 212, 0.35);
+    }
+    .badge-gradient {
+      background: linear-gradient(135deg, rgba(84, 32, 230, 0.2) 0%, rgba(6, 182, 212, 0.15) 100%);
+      border: 1px solid rgba(121, 76, 247, 0.3);
+    }
+    .card-hover-effect {
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-hover-effect:hover {
+      transform: translateY(-4px);
+      border-color: rgba(121, 76, 247, 0.55);
+      box-shadow: 0 12px 30px -10px rgba(84, 32, 230, 0.3);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-purple-600 selection:text-white">
+
+  <!-- Notification Toast -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none bg-slate-900 border border-snyk-purple text-white px-5 py-3.5 rounded-xl shadow-2xl flex items-center space-x-3">
+    <i class="fa-solid fa-circle-check text-snyk-accentEmerald text-lg"></i>
+    <span id="toast-text" class="text-sm font-medium">Copied to clipboard!</span>
+  </div>
+
+  <!-- Top Sticky Navigation -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-snyk-darkBg/90 border-b border-snyk-cardBorder transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-snyk-purple to-cyan-500 flex items-center justify-center font-bold text-lg text-white shadow-lg group-hover:scale-105 transition-transform">
+          RG
+        </div>
+        <div>
+          <span class="text-lg font-bold tracking-tight text-white block">Ross Goodburn</span>
+          <span class="text-xs text-snyk-textMuted flex items-center space-x-1.5 font-mono">
+            <span class="w-2 h-2 rounded-full bg-snyk-accentEmerald animate-pulse"></span>
+            <span>Target: Channel Manager UK&I @ Snyk</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center space-x-7 text-sm font-medium text-slate-300">
+        <a href="#overview" class="hover:text-snyk-purpleLight transition-colors">Overview</a>
+        <a href="#requirements" class="hover:text-snyk-purpleLight transition-colors">Snyk Fit</a>
+        <a href="#track-record" class="hover:text-snyk-purpleLight transition-colors">Track Record</a>
+        <a href="#partner-ecosystem" class="hover:text-snyk-purpleLight transition-colors">Partner Network</a>
+        <a href="#references" class="hover:text-snyk-purpleLight transition-colors">Endorsements</a>
+        <a href="#mobility" class="hover:text-snyk-purpleLight transition-colors">Mobility</a>
+      </nav>
+
+      <div class="flex items-center space-x-3">
+        <button onclick="copyToClipboard('ross.goodburn@gmail.com', 'Email copied: ross.goodburn@gmail.com')" class="hidden sm:inline-flex items-center space-x-2 text-xs font-semibold px-4 py-2.5 rounded-lg border border-slate-700 bg-snyk-cardBg hover:bg-slate-800 text-slate-200 transition-all">
+          <i class="fa-regular fa-envelope text-snyk-purpleLight"></i>
+          <span>Copy Email</span>
+        </button>
+        <a href="mailto:ross.goodburn@gmail.com?subject=Snyk%20Channel%20Manager%20Role%20-%20Ross%20Goodburn" class="inline-flex items-center space-x-2 text-xs font-bold px-4 py-2.5 rounded-lg bg-snyk-purple hover:bg-snyk-purpleHover text-white purple-glow transition-all">
+          <span>Get in Touch</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="overview" class="relative overflow-hidden pt-14 pb-20 border-b border-snyk-cardBorder">
+    <!-- Glow Backdrop -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gradient-to-tr from-snyk-purple/30 to-snyk-accentCyan/15 blur-[120px] pointer-events-none rounded-full"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="inline-flex items-center space-x-2.5 px-3.5 py-1.5 rounded-full badge-gradient mb-6">
+        <i class="fa-solid fa-shield-halved text-xs text-snyk-purpleLight"></i>
+        <span class="text-xs font-semibold text-slate-200 uppercase tracking-wider font-mono">Senior Cyber SaaS Channel Leader</span>
+        <span class="text-xs text-snyk-accentEmerald">● 15+ Yrs Field Proof</span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-8 space-y-6">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] text-white">
+            Mobilising the UK&I Channel to Accelerate 
+            <span class="bg-gradient-to-r from-purple-400 via-indigo-300 to-cyan-400 bg-clip-text text-transparent">Snyk DevSecOps</span> ARR.
+          </h1>
+          <p class="text-lg sm:text-xl text-slate-300 max-w-3xl font-normal leading-relaxed">
+            I don’t just ‘farm’ existing accounts. I build repeatable, high-trust co-selling engines with Tier-1 VARs like <strong class="text-white">Softcat</strong>, <strong class="text-white">Computacenter</strong>, and major GSIs—equipping partner sales teams to bridge the gap between CISO compliance budgets and developer velocity.
+          </p>
+
+          <!-- Badges / Direct Facts -->
+          <div class="flex flex-wrap gap-2.5 pt-2">
+            <span class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-700/80 text-xs font-medium text-slate-200 flex items-center space-x-2">
+              <i class="fa-solid fa-chart-line text-emerald-400"></i>
+              <span>148% FY26/27 Quota (Creatio)</span>
+            </span>
+            <span class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-700/80 text-xs font-medium text-slate-200 flex items-center space-x-2">
+              <i class="fa-solid fa-rocket text-purple-400"></i>
+              <span>Softcat: $20k &rarr; $2.6M in 2 Yrs</span>
+            </span>
+            <span class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-700/80 text-xs font-medium text-slate-200 flex items-center space-x-2">
+              <i class="fa-solid fa-location-dot text-cyan-400"></i>
+              <span>Beaconsfield (30m to London & LHR)</span>
+            </span>
+            <span class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-700/80 text-xs font-medium text-slate-200 flex items-center space-x-2">
+              <i class="fa-solid fa-plane-departure text-amber-400"></i>
+              <span>50% Travel Ready</span>
+            </span>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-4 pt-4">
+            <a href="#requirements" class="px-6 py-3.5 rounded-xl bg-snyk-purple hover:bg-snyk-purpleHover text-white font-semibold text-sm shadow-lg purple-glow flex items-center space-x-2.5 transition-all">
+              <span>Review Snyk Requirement Fit</span>
+              <i class="fa-solid fa-list-check text-xs"></i>
+            </a>
+            <a href="#track-record" class="px-6 py-3.5 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-white font-semibold text-sm flex items-center space-x-2.5 transition-all">
+              <span>Examine Quota Track Record</span>
+              <i class="fa-solid fa-arrow-down text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Proof Snapshot Card -->
+        <div class="lg:col-span-4">
+          <div class="rounded-2xl bg-snyk-cardBg border border-snyk-cardBorder p-6 shadow-2xl relative overflow-hidden backdrop-blur-xl">
+            <div class="absolute -right-12 -top-12 w-32 h-32 bg-purple-600/20 rounded-full blur-2xl"></div>
+            <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+              <span class="text-xs font-mono text-snyk-purpleLight uppercase tracking-wider">Candidate Snapshot</span>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-950 text-emerald-400 font-medium border border-emerald-800/60">Available Q4 2026</span>
+            </div>
+
+            <div class="space-y-4 pt-4 text-sm">
+              <div>
+                <p class="text-xs text-snyk-textMuted">Current Role</p>
+                <p class="text-white font-semibold">Senior Partner Manager EMEA @ Creatio</p>
+                <p class="text-xs text-emerald-400 font-mono mt-0.5">148% of H1 Revenue Target Achieved</p>
+              </div>
+              <div>
+                <p class="text-xs text-snyk-textMuted">Methodology</p>
+                <p class="text-white font-medium">Challenger Sales Certified (Selling, Coaching, Mobilisers)</p>
+              </div>
+              <div>
+                <p class="text-xs text-snyk-textMuted">Hyperscaler Co-Sell</p>
+                <p class="text-white font-medium">AWS ISV Accelerate & CSP Deal Reg Experience</p>
+              </div>
+              <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+                <span class="text-xs text-slate-400">Direct Softcat Endorsements:</span>
+                <span class="text-xs font-bold text-snyk-purpleLight">3 Tech & Alliance Leaders</span>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
+              <button onclick="copyToClipboard('+447970699906', 'Phone copied: +44 7970 699906')" class="text-slate-300 hover:text-white flex items-center space-x-1.5 transition-colors">
+                <i class="fa-solid fa-phone text-snyk-accentCyan"></i>
+                <span>+44 7970 699906</span>
+              </button>
+              <a href="https://www.linkedin.com/in/rossgoodburn/" target="_blank" class="text-slate-300 hover:text-white flex items-center space-x-1.5 transition-colors">
+                <i class="fa-brands fa-linkedin text-blue-400"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Metrics Impact Bar -->
+  <section class="py-12 bg-slate-950/60 border-b border-snyk-cardBorder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        
+        <div class="p-5 rounded-xl bg-snyk-cardBg/60 border border-slate-800 card-hover-effect">
+          <div class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-300 font-mono">
+            $20k &rarr; $2.6M
+          </div>
+          <p class="text-xs uppercase tracking-wider text-snyk-textMuted mt-2 font-semibold">Softcat Channel Ramp</p>
+          <p class="text-[11px] text-slate-400 mt-1">24-month hypergrowth during KnowBe4 UK rollout</p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-snyk-cardBg/60 border border-slate-800 card-hover-effect">
+          <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400 font-mono">
+            148%
+          </div>
+          <p class="text-xs uppercase tracking-wider text-snyk-textMuted mt-2 font-semibold">Current Quota Performance</p>
+          <p class="text-[11px] text-slate-400 mt-1">Creatio EMEA H1 FY26-27 Revenue Target</p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-snyk-cardBg/60 border border-slate-800 card-hover-effect">
+          <div class="text-3xl sm:text-4xl font-extrabold text-cyan-400 font-mono">
+            £11.1M+
+          </div>
+          <p class="text-xs uppercase tracking-wider text-snyk-textMuted mt-2 font-semibold">Pipeline Generated</p>
+          <p class="text-[11px] text-slate-400 mt-1">Active qualified partner pipeline built at eSentire</p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-snyk-cardBg/60 border border-slate-800 card-hover-effect">
+          <div class="text-3xl sm:text-4xl font-extrabold text-white font-mono">
+            15 Years
+          </div>
+          <p class="text-xs uppercase tracking-wider text-snyk-textMuted mt-2 font-semibold">UK&I Cyber Channel Focus</p>
+          <p class="text-[11px] text-slate-400 mt-1">DevSecOps, CNAPP, MDR, XDR & CSP co-sell</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Requirement Mapping (Snyk Job Spec) -->
+  <section id="requirements" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-12">
+        <div class="inline-flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-snyk-purpleLight mb-2">
+          <i class="fa-solid fa-code-compare"></i>
+          <span>Direct Spec Alignment</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+          How Ross Directly Delivers on Snyk’s Mandate
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2">
+          Click on any requirement below to review the commercial evidence, methodologies, and documented track record from Ross's 15-year channel tenure.
+        </p>
+      </div>
+
+      <!-- Accordion Grid -->
+      <div class="space-y-4">
+        
+        <!-- Requirement 1 -->
+        <div class="rounded-xl border border-snyk-cardBorder bg-snyk-cardBg overflow-hidden transition-all duration-200">
+          <button onclick="toggleAccordion('req-1')" class="w-full text-left px-6 py-5 flex items-center justify-between bg-slate-900/60 hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center space-x-4">
+              <span class="w-8 h-8 rounded-lg bg-purple-950/80 border border-purple-800/80 text-purple-300 flex items-center justify-center font-mono text-sm font-bold">01</span>
+              <div>
+                <span class="text-xs font-mono uppercase text-snyk-purpleLight tracking-wider block">Requirement</span>
+                <span class="text-base sm:text-lg font-semibold text-white">5+ Years Channel Sales & UK/I Partner Ecosystem (Softcat, Computacenter, etc.)</span>
+              </div>
+            </div>
+            <i id="req-1-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+          </button>
+          
+          <div id="req-1-content" class="px-6 py-6 border-t border-slate-800/80 space-y-4 text-sm text-slate-300">
+            <p>
+              <strong class="text-white">Proven Execution:</strong> Ross brings 15 years of uninterrupted experience acquiring, enabling, and managing top UK&I resellers, consultancies, and GSIs. He has established operational conduits with client directors and practice leads across <span class="text-white font-medium">Softcat, Computacenter, CDW, Bytes, Saepio, SoftwareOne, Somerford Associates, Deloitte, EY, PwC, TCS, and Wipro</span>.
+            </p>
+            <div class="p-4 rounded-lg bg-slate-900/90 border-l-4 border-snyk-purple space-y-2">
+              <span class="text-xs font-mono uppercase text-purple-400 font-semibold block">Case Study: Softcat Growth Engine (KnowBe4)</span>
+              <p class="text-xs text-slate-300">
+                When Ross joined KnowBe4 UK, Softcat annual run-rate sat at ~$20k. By executing daily floor engagement, building sales incentives, leading account-mapping sessions, and working alongside direct AEs, he scaled Softcat channel revenue to <strong class="text-white">$1.3M in Year 1</strong> and <strong class="text-white">$2.6M in Year 2</strong>.
+              </p>
+            </div>
+            <p class="text-xs text-slate-400">
+              <i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>
+              Extensive experience managing deal-registration workflows, rule-of-engagement governance, and partner contract agreements.
+            </p>
+          </div>
+        </div>
+
+        <!-- Requirement 2 -->
+        <div class="rounded-xl border border-snyk-cardBorder bg-snyk-cardBg overflow-hidden transition-all duration-200">
+          <button onclick="toggleAccordion('req-2')" class="w-full text-left px-6 py-5 flex items-center justify-between bg-slate-900/60 hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center space-x-4">
+              <span class="w-8 h-8 rounded-lg bg-indigo-950/80 border border-indigo-800/80 text-indigo-300 flex items-center justify-center font-mono text-sm font-bold">02</span>
+              <div>
+                <span class="text-xs font-mono uppercase text-snyk-accentCyan tracking-wider block">Requirement</span>
+                <span class="text-base sm:text-lg font-semibold text-white">Demonstrated Record of Solution & Value-Based Selling</span>
+              </div>
+            </div>
+            <i id="req-2-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+          </button>
+          
+          <div id="req-2-content" class="hidden px-6 py-6 border-t border-slate-800/80 space-y-4 text-sm text-slate-300">
+            <p>
+              <strong class="text-white">Methodology & Rigor:</strong> Formally trained in the <strong class="text-white">Challenger Sales Model</strong> (Challenger Selling, Coaching, Marketing, and Activating a Mobiliser) alongside Cisco Sales Expert and Microsoft Solution Selling certifications.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="p-3.5 rounded-lg bg-slate-900/80 border border-slate-800">
+                <span class="text-xs font-mono font-bold text-snyk-accentCyan block mb-1">Bridging the Two Buying Centers</span>
+                <p class="text-xs text-slate-300">
+                  DevSecOps deals stall when treated solely as SecOps tooling. Ross trains partner AEs to unite the CISO (risk & compliance budget) with the VP of Engineering/DevOps (developer velocity, cycle time, false-positive reduction).
+                </p>
+              </div>
+              <div class="p-3.5 rounded-lg bg-slate-900/80 border border-slate-800">
+                <span class="text-xs font-mono font-bold text-emerald-400 block mb-1">Value-First Enablement</span>
+                <p class="text-xs text-slate-300">
+                  Focuses on building business cases around ROI, risk exposure reduction, and remediation efficiency, avoiding price-comparison bake-offs against legacy SAST scanners.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Requirement 3 -->
+        <div class="rounded-xl border border-snyk-cardBorder bg-snyk-cardBg overflow-hidden transition-all duration-200">
+          <button onclick="toggleAccordion('req-3')" class="w-full text-left px-6 py-5 flex items-center justify-between bg-slate-900/60 hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center space-x-4">
+              <span class="w-8 h-8 rounded-lg bg-emerald-950/80 border border-emerald-800/80 text-emerald-300 flex items-center justify-center font-mono text-sm font-bold">03</span>
+              <div>
+                <span class="text-xs font-mono uppercase text-snyk-accentEmerald tracking-wider block">Requirement</span>
+                <span class="text-base sm:text-lg font-semibold text-white">High Energy, Autonomy & Up to 50% Travel for Partner Enablement</span>
+              </div>
+            </div>
+            <i id="req-3-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+          </button>
+          
+          <div id="req-3-content" class="hidden px-6 py-6 border-t border-slate-800/80 space-y-4 text-sm text-slate-300">
+            <p>
+              <strong class="text-white">Proactive Owner Mindset:</strong> Operates as an independent commercial leader capable of structuring multi-tier alliance plans without requiring micro-management. Demonstrates a strong history of spending direct face-to-face time in partner offices across Marlow, London, Reading, Manchester, and Edinburgh.
+            </p>
+            <div class="p-4 rounded-lg bg-slate-900/90 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <span class="text-xs font-mono uppercase text-slate-400">Mobility Advantage</span>
+                <p class="text-sm font-bold text-white mt-0.5">Beaconsfield, Buckinghamshire Hub</p>
+                <p class="text-xs text-slate-400">30 mins to London Marylebone (Snyk London HQ) & 30 mins to Heathrow Airport.</p>
+              </div>
+              <span class="px-3.5 py-1.5 rounded-lg bg-emerald-950 border border-emerald-800/60 text-emerald-400 font-mono text-xs font-semibold whitespace-nowrap">
+                100% Ready for 50% Travel
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Requirement 4 -->
+        <div class="rounded-xl border border-snyk-cardBorder bg-snyk-cardBg overflow-hidden transition-all duration-200">
+          <button onclick="toggleAccordion('req-4')" class="w-full text-left px-6 py-5 flex items-center justify-between bg-slate-900/60 hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center space-x-4">
+              <span class="w-8 h-8 rounded-lg bg-purple-950/80 border border-purple-800/80 text-purple-300 flex items-center justify-center font-mono text-sm font-bold">04</span>
+              <div>
+                <span class="text-xs font-mono uppercase text-purple-400 tracking-wider block">Requirement</span>
+                <span class="text-base sm:text-lg font-semibold text-white">Solid Understanding of Snyk’s Solutions & DevSecOps Value</span>
+              </div>
+            </div>
+            <i id="req-4-icon" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-200"></i>
+          </button>
+          
+          <div id="req-4-content" class="hidden px-6 py-6 border-t border-slate-800/80 space-y-4 text-sm text-slate-300">
+            <p>
+              <strong class="text-white">Technical Comprehension:</strong> In-depth familiarity with Snyk’s developer-native portfolio covering <strong class="text-white">Snyk Code (SAST)</strong>, <strong class="text-white">Snyk Open Source (SCA)</strong>, <strong class="text-white">Snyk Container</strong>, and <strong class="text-white">Snyk Cloud (CSPM/IaC)</strong>.
+            </p>
+            
+            <!-- Real Softcat Quote Highlight -->
+            <div class="p-4 rounded-xl bg-purple-950/40 border border-purple-800/50 space-y-2">
+              <div class="flex items-center space-x-2 text-purple-300 text-xs font-mono font-semibold">
+                <i class="fa-solid fa-quote-left"></i>
+                <span>Direct Partner Intelligence (Softcat Leadership)</span>
+              </div>
+              <blockquote class="italic text-xs sm:text-sm text-slate-200">
+                “I really love Snyk as a vendor, and I put a great deal of emphasis on application security, with which I put Snyk as my top vendor. As such, we grew them into double digit revenue growth after 2–3 years from pretty much nothing.”
+              </blockquote>
+              <p class="text-[11px] text-purple-300 text-right">— Senior Channel Leadership Contact, Softcat</p>
+            </div>
+
+            <p class="text-xs text-slate-400">
+              <strong class="text-white">The AI Code Inflection Point:</strong> As autonomous coding tools (GitHub Copilot, Cursor, etc.) generate code faster than human security teams can review, Snyk’s automated gating in the IDE and CI/CD becomes essential infrastructure that UK partners can easily package into high-margin security practices.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Career Timeline & Track Record -->
+  <section id="track-record" class="py-20 bg-slate-950/50 border-t border-b border-snyk-cardBorder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-wider text-snyk-accentCyan">Individual & Team Excellence</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">15-Year Career Track Record</h2>
+          <p class="text-slate-400 text-sm mt-1">Demonstrated, verifiable quota exceedance across enterprise cyber SaaS vendors.</p>
+        </div>
+        <div class="mt-4 md:mt-0 flex items-center space-x-2 text-xs font-mono text-slate-400 bg-slate-900 border border-slate-800 px-3.5 py-2 rounded-lg">
+          <i class="fa-solid fa-file-invoice-dollar text-emerald-400"></i>
+          <span>P60 Backed: £158k &bull; £162k &bull; £179k &bull; £181k</span>
+        </div>
+      </div>
+
+      <!-- Experience Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Creatio -->
+        <div class="rounded-2xl bg-snyk-cardBg border border-snyk-cardBorder p-6 flex flex-col justify-between card-hover-effect">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-mono text-purple-400">Sep 2025 – Present</span>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800 font-bold">148% Quota</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Senior Partner Manager EMEA</h3>
+            <p class="text-xs text-snyk-textMuted font-semibold mb-4">Creatio</p>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Spearheading UK&I partner acquisition and GTM across VARs, GSIs, and advisory partners. Reached 148% of H1 revenue quota ($1.2M target) and uncovered two of the largest enterprise pipeline opportunities ever originated in the UK.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800 text-xs font-mono text-slate-400">
+            Metric: $1.2M Target &rarr; 148% Attainment
+          </div>
+        </div>
+
+        <!-- Claroty -->
+        <div class="rounded-2xl bg-snyk-cardBg border border-snyk-cardBorder p-6 flex flex-col justify-between card-hover-effect">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-mono text-purple-400">Dec 2023 – Aug 2025</span>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-indigo-950 text-indigo-300 border border-indigo-800 font-bold">110% Achieved</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Channel Sales Director</h3>
+            <p class="text-xs text-snyk-textMuted font-semibold mb-4">Claroty (CPS SaaS Platform)</p>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Expanded from UK&I to Benelux & Nordics within two months. Personally drove and onboarded <strong class="text-white">BT Group</strong> as a strategic partner. Drove $4.18M revenue on a $3.80M quota in 2024. Heavily leveraged <strong class="text-white">AWS ISV Accelerate</strong> for marketplace co-sell deals.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800 text-xs font-mono text-slate-400">
+            Metric: $4.18M Closed (110% FY24)
+          </div>
+        </div>
+
+        <!-- eSentire -->
+        <div class="rounded-2xl bg-snyk-cardBg border border-snyk-cardBorder p-6 flex flex-col justify-between card-hover-effect">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-mono text-purple-400">Jun 2021 – Dec 2023</span>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-800 font-bold">First EMEA Hire</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Senior Channel Dev Manager</h3>
+            <p class="text-xs text-snyk-textMuted font-semibold mb-4">eSentire (Authority in MDR)</p>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Recruited directly after endorsement from Adam Louca (former CTO at Softcat). Built the partner ecosystem from scratch outside North America, generating <strong class="text-white">£11.1M in active qualified partner pipeline</strong> and establishing steady revenue flow from Softcat, CDW, Babble & Saepio.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800 text-xs font-mono text-slate-400">
+            Metric: £11.1M Active Pipeline Generated
+          </div>
+        </div>
+
+        <!-- KnowBe4 -->
+        <div class="rounded-2xl bg-snyk-cardBg border border-snyk-cardBorder p-6 flex flex-col justify-between card-hover-effect">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-mono text-purple-400">Apr 2018 – Jun 2021</span>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-purple-950 text-purple-300 border border-purple-800 font-bold">890% Peak Quota</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Senior Channel Manager</h3>
+            <p class="text-xs text-snyk-textMuted font-semibold mb-4">KnowBe4 (Security Awareness SaaS)</p>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Turned an early-stage UK presence into a tier-1 partner powerhouse. Achieved 890% ($1.22M), 796% ($2.62M), and 502% ($1.65M) of quota. Scaled Softcat partner sales from under $20k to $2.6M annually through deep desk-level enablement.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800 text-xs font-mono text-slate-400">
+            Softcat Ramp: $20k &rarr; $1.3M &rarr; $2.6M
+          </div>
+        </div>
+
+        <!-- NCC Group / RandomStorm -->
+        <div class="rounded-2xl bg-snyk-cardBg border border-snyk-cardBorder p-6 flex flex-col justify-between card-hover-effect">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-mono text-purple-400">Aug 2010 – Apr 2018</span>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 font-bold">Salesperson of Year</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Senior Channel Sales Manager</h3>
+            <p class="text-xs text-snyk-textMuted font-semibold mb-4">NCC Group / RandomStorm</p>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Managed partner sales for startup RandomStorm before being acquired by FTSE 250 leader NCC Group. Awarded Salesperson of the Year (128% target) with consistent 95–102% annual quota delivery across security assessment and managed service offerings.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800 text-xs font-mono text-slate-400">
+            Tenure: 8 Years of Channel Delivery
+          </div>
+        </div>
+
+        <!-- Technical Foundations -->
+        <div class="rounded-2xl bg-gradient-to-br from-snyk-cardBg to-purple-950/30 border border-snyk-cardBorder p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-mono text-cyan-400">Technical Foundation</span>
+              <span class="text-xs text-slate-400 font-mono">BEng (Hons)</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Engineering Rigor</h3>
+            <p class="text-xs text-snyk-textMuted font-semibold mb-4">University of Sheffield & Industrial Training</p>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Holds a <strong class="text-white">BEng (Hons) in Control Engineering</strong>. Ross combines sharp engineering discipline with commercial persuasion, allowing him to speak authoritatively with technical directors, solution architects, and developer leads.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800 text-xs font-mono text-purple-300">
+            DevSecOps, CNAPP, MDR & AWS Familiarity
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Partner Ecosystem Network -->
+  <section id="partner-ecosystem" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-wider text-snyk-purpleLight">Established Relationships</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">UK&I Partner Network Matrix</h2>
+          <p class="text-slate-400 text-sm mt-1">Partners Ross has actively enabled, co-sold with, or onboarded across his career.</p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="mt-6 md:mt-0 flex flex-wrap gap-2 text-xs">
+          <button onclick="filterPartners('all')" class="partner-filter-btn px-3.5 py-1.5 rounded-lg bg-snyk-purple text-white font-medium transition-all" data-filter="all">All</button>
+          <button onclick="filterPartners('var')" class="partner-filter-btn px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white font-medium transition-all" data-filter="var">Tier-1 VARs</button>
+          <button onclick="filterPartners('security')" class="partner-filter-btn px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white font-medium transition-all" data-filter="security">Security Specialists</button>
+          <button onclick="filterPartners('gsi')" class="partner-filter-btn px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white font-medium transition-all" data-filter="gsi">GSIs & Consultancies</button>
+          <button onclick="filterPartners('csp')" class="partner-filter-btn px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white font-medium transition-all" data-filter="csp">Cloud Co-Sell</button>
+        </div>
+      </div>
+
+      <!-- Partner Cards Grid -->
+      <div id="partner-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5">
+        
+        <div class="partner-item var p-4 rounded-xl bg-snyk-cardBg border border-slate-800 text-center card-hover-effect">
+          <span class="text-xs text-snyk-purpleLight font-mono block mb-1">Tier-1 VAR</span>
+          <p class="font-bold text-white text-sm">Softcat</p>
+          <span class="text-[10px] text-slate-400 block mt-1">Major Track Record</span>
+        </div>
+
+        <div class="partner-item var p-4 rounded-xl bg-snyk-cardBg border border-slate-800 text-center card-hover-effect">
+          <span class="text-xs text-snyk-purpleLight font-mono block mb-1">Tier-1 VAR</span>
+          <p class="font-bold text-white text-sm">Computacenter</p>
+          <span class="text-[10px] text-slate-400 block mt-1">Enterprise Co-Sell</span>
+        </div>
+
+        <div class="partner-item var p-4 rounded-xl bg-snyk-cardBg border border-slate-800 text-center card-hover-effect">
+          <span class="text-xs text-snyk-purpleLight font-mono block mb-1">Tier-1 VAR</span>
+          <p class="font-bold text-white text-sm">CDW</p>
+          <span class="text-[10px] text-slate-400 block mt-1">UK & Multinational</span>
+        </div>
+
+        <div class="partner-item var p-4 rounded-xl bg-snyk-cardBg border border-slate-800 text-center card-hover-effect">
+          <span class="text-xs text-snyk-purpleLight font-mono block mb-1">Tier-1 VAR</span>
+          <p class="font-bold text-white text-sm">Bytes Software</p>
+          <span class="text-[10px] text-slate-400 block mt-1">Corporate & Enterprise</span>
+        </div>
+
+        <div class="partner-item var p-4 rounded-xl bg-snyk-cardBg border border-slate-800 text-center card-hover-effect">
+          <span class="text-xs text-snyk-purpleLight font-mono block mb-1">Tier-1 VAR</span>
+          <p class="font-bold text-white text-sm">SoftwareOne</p>
+          <span class="text-[10px] text-slate-400 block mt-1">Licensing & Cloud</span>
+        </div>
+
+        <div class="partner-item security p-4 rounded-xl bg-snyk-cardBg border border-slate-800 text-center card-hover-effect">
+          <span class="text-xs text-cyan-400 font-mono block mb-1">Security VAR</span>
+          <p class="font-bold text-white text-sm">Saepio</p>
+          <span class="text-[10px] text-slate-400 block mt-1">Boutique Cyber Leader</span>
+        </div>
+
+        <div class="partner-item security p-4 rounded-xl bg-snyk-cardBg border border-slate-800 text-center card-hover-effect">
+          <span class="text-xs text-cyan-400 font-mono block mb-1">DevSec Specialist</span>
+          <p class="font-bold text-white text-sm">Somerford Assoc.</p>
+          <span class="text-[10px] text-slate-400 block mt-1">Technical Delivery</span>
+        </div>
+
+        <div class="partner-item security p-4 rounded-xl bg-snyk-cardBg border border-slate-800 text-center card-hover-effect">
+          <span class="text-xs text-cyan-400 font-mono block mb-1">MSP / Telecom</span>
+          <p class="font-bold text-white text-sm">Babble</p>
+          <span class="text-[10px] text-slate-400 block mt-1">Mid-Market MSSP</span>
+        </div>
+
+        <div class="partner-item gsi p-4 rounded-xl bg-snyk-cardBg border border-slate-800 text-center card-hover-effect">
+          <span class="text-xs text-amber-400 font-mono block mb-1">Telco / GSI</span>
+          <p class="font-bold text-white text-sm">BT Group</p>
+          <span class="text-[10px] text-slate-400 block mt-1">Personally Onboarded</span>
+        </div>
+
+        <div class="partner-item gsi p-4 rounded-xl bg-snyk-cardBg border border-slate-800 text-center card-hover-effect">
+          <span class="text-xs text-amber-400 font-mono block mb-1">GSI / Big 4</span>
+          <p class="font-bold text-white text-sm">Deloitte</p>
+          <span class="text-[10px] text-slate-400 block mt-1">Advisory & Cloud</span>
+        </div>
+
+        <div class="partner-item gsi p-4 rounded-xl bg-snyk-cardBg border border-slate-800 text-center card-hover-effect">
+          <span class="text-xs text-amber-400 font-mono block mb-1">GSI / Big 4</span>
+          <p class="font-bold text-white text-sm">PwC & EY</p>
+          <span class="text-[10px] text-slate-400 block mt-1">Risk Consulting</span>
+        </div>
+
+        <div class="partner-item gsi p-4 rounded-xl bg-snyk-cardBg border border-slate-800 text-center card-hover-effect">
+          <span class="text-xs text-amber-400 font-mono block mb-1">Global SI</span>
+          <p class="font-bold text-white text-sm">TCS & Wipro</p>
+          <span class="text-[10px] text-slate-400 block mt-1">Systems Integration</span>
+        </div>
+
+        <div class="partner-item csp p-4 rounded-xl bg-snyk-cardBg border border-slate-800 text-center card-hover-effect">
+          <span class="text-xs text-emerald-400 font-mono block mb-1">Cloud Hyperscaler</span>
+          <p class="font-bold text-white text-sm">AWS ISV Accel</p>
+          <span class="text-[10px] text-slate-400 block mt-1">Co-Sell Program</span>
+        </div>
+
+        <div class="partner-item csp p-4 rounded-xl bg-snyk-cardBg border border-slate-800 text-center card-hover-effect">
+          <span class="text-xs text-emerald-400 font-mono block mb-1">Distribution</span>
+          <p class="font-bold text-white text-sm">Exertis / Brigantia</p>
+          <span class="text-[10px] text-slate-400 block mt-1">Two-Tier Distribution</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Verified References & Softcat Endorsements -->
+  <section id="references" class="py-20 bg-slate-950/60 border-t border-b border-snyk-cardBorder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-mono uppercase tracking-wider text-snyk-purpleLight">Reputation & Social Proof</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Named UK Channel References</h2>
+        <p class="text-slate-400 text-sm mt-2">
+          Recognized and trusted by key leaders at the largest security partners in the United Kingdom.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Reference 1 -->
+        <div class="rounded-2xl bg-snyk-cardBg border border-snyk-cardBorder p-6 flex flex-col justify-between card-hover-effect">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-purple-950 border border-purple-800 flex items-center justify-center text-purple-300 font-bold text-sm mb-4">
+              KN
+            </div>
+            <h3 class="text-base font-bold text-white">Kieron Newsham</h3>
+            <p class="text-xs text-purple-400 font-medium">Cyber Security Chief Technologist</p>
+            <p class="text-xs text-slate-400 font-mono mb-4">Softcat</p>
+            <p class="text-xs text-slate-300 italic leading-relaxed">
+              Long-standing relationship at Softcat, available to testify to Ross’s technical capability, partner advocacy, and solution-led sales execution.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400">
+            <span>Status: Available on request</span>
+            <i class="fa-solid fa-circle-check text-emerald-400"></i>
+          </div>
+        </div>
+
+        <!-- Reference 2 -->
+        <div class="rounded-2xl bg-snyk-cardBg border border-snyk-cardBorder p-6 flex flex-col justify-between card-hover-effect">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-indigo-950 border border-indigo-800 flex items-center justify-center text-indigo-300 font-bold text-sm mb-4">
+              TH
+            </div>
+            <h3 class="text-base font-bold text-white">Trevor Highley</h3>
+            <p class="text-xs text-indigo-400 font-medium">Head of NetSec</p>
+            <p class="text-xs text-slate-400 font-mono mb-4">Softcat</p>
+            <p class="text-xs text-slate-300 italic leading-relaxed">
+              Extensive collaboration over multiple years driving joint security revenue and aligning product offerings with customer risk profiles.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400">
+            <span>Status: Available on request</span>
+            <i class="fa-solid fa-circle-check text-emerald-400"></i>
+          </div>
+        </div>
+
+        <!-- Reference 3 -->
+        <div class="rounded-2xl bg-snyk-cardBg border border-snyk-cardBorder p-6 flex flex-col justify-between card-hover-effect">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-cyan-950 border border-cyan-800 flex items-center justify-center text-cyan-300 font-bold text-sm mb-4">
+              WD
+            </div>
+            <h3 class="text-base font-bold text-white">Will Day</h3>
+            <p class="text-xs text-cyan-400 font-medium">Cyber Security Alliances Lead</p>
+            <p class="text-xs text-slate-400 font-mono mb-4">Softcat</p>
+            <p class="text-xs text-slate-300 italic leading-relaxed">
+              Direct alliance governance partner, able to vouch for Ross’s consistency in partner planning, rule-of-engagement integrity, and joint AE alignment.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400">
+            <span>Status: Available on request</span>
+            <i class="fa-solid fa-circle-check text-emerald-400"></i>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Additional Peer References Note -->
+      <div class="mt-8 text-center">
+        <p class="text-xs text-slate-400">
+          <i class="fa-solid fa-info-circle text-purple-400 mr-1.5"></i>
+          Additional executive references across CDW, Saepio (Rob Pooley), and former SaaS vendor sales leadership available upon request.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Location & Mobility Section -->
+  <section id="mobility" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="rounded-3xl bg-gradient-to-r from-snyk-cardBg via-slate-900 to-snyk-cardBg border border-snyk-cardBorder p-8 sm:p-12 relative overflow-hidden">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-4">
+            <span class="text-xs font-mono uppercase tracking-wider text-emerald-400">Strategic Location Advantage</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white">
+              Based in Beaconsfield, Buckinghamshire: Built for 50% Travel & London Office Presence
+            </h2>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              The role requires an on-site London cadence and up to 50% regional travel across the UK&I partner ecosystem. Ross's South Buckinghamshire base offers optimum proximity:
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div class="p-4 rounded-xl bg-slate-950/70 border border-slate-800 flex items-start space-x-3">
+                <i class="fa-solid fa-train text-snyk-purpleLight text-lg mt-0.5"></i>
+                <div>
+                  <p class="text-sm font-bold text-white">30 Mins to Central London</p>
+                  <p class="text-xs text-slate-400">Direct Chiltern Railways into Marylebone; seamless access to Snyk’s London office and city partners.</p>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-950/70 border border-slate-800 flex items-start space-x-3">
+                <i class="fa-solid fa-plane-departure text-cyan-400 text-lg mt-0.5"></i>
+                <div>
+                  <p class="text-sm font-bold text-white">30 Mins to Heathrow Airport</p>
+                  <p class="text-xs text-slate-400">Rapid access for Ireland travel (Dublin partner sessions) and European executive gatherings.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 flex flex-col justify-center items-center p-6 rounded-2xl bg-slate-950/80 border border-slate-800 text-center">
+            <div class="w-16 h-16 rounded-full bg-emerald-950/60 border border-emerald-800/80 flex items-center justify-center text-emerald-400 text-2xl mb-4">
+              <i class="fa-solid fa-car-side"></i>
+            </div>
+            <h3 class="text-base font-bold text-white">Thames Valley & South East Hub</h3>
+            <p class="text-xs text-slate-400 mt-2 max-w-xs">
+              Immediate proximity to the UK's major cyber corridor: Softcat (Marlow), Computacenter (Hatfield), CDW & Bytes (Surrey/Reading).
+            </p>
+            <div class="mt-4 px-3 py-1 rounded-full bg-slate-900 border border-slate-700 text-[11px] font-mono text-slate-300">
+              Immediate Mobility for QBRs & Partner Days
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Contact & Action Footer -->
+  <footer id="contact" class="py-16 bg-slate-950 border-t border-snyk-cardBorder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <div class="max-w-3xl mx-auto space-y-6">
+        <div class="w-12 h-12 mx-auto rounded-2xl bg-gradient-to-tr from-snyk-purple to-cyan-500 flex items-center justify-center font-bold text-xl text-white shadow-xl">
+          RG
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+          Ready to Scale Snyk’s UK&I Partner Ecosystem
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+          Combining 15 years of cybersecurity partner leadership, active Tier-1 VAR relationships, and a proven hunger to exceed quota in the AI DevSecOps era.
+        </p>
+
+        <!-- Direct Contact Badges -->
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+          
+          <button onclick="copyToClipboard('ross.goodburn@gmail.com', 'Email copied: ross.goodburn@gmail.com')" class="px-5 py-3 rounded-xl bg-slate-900 border border-slate-700 hover:border-purple-500 text-white text-xs sm:text-sm font-semibold flex items-center space-x-2 transition-all">
+            <i class="fa-solid fa-envelope text-snyk-purpleLight"></i>
+            <span>ross.goodburn@gmail.com</span>
+            <i class="fa-regular fa-copy text-xs text-slate-500 ml-1"></i>
+          </button>
+
+          <button onclick="copyToClipboard('+447970699906', 'Phone copied: +44 7970 699906')" class="px-5 py-3 rounded-xl bg-slate-900 border border-slate-700 hover:border-cyan-500 text-white text-xs sm:text-sm font-semibold flex items-center space-x-2 transition-all">
+            <i class="fa-solid fa-phone text-cyan-400"></i>
+            <span>+44 7970 699906</span>
+            <i class="fa-regular fa-copy text-xs text-slate-500 ml-1"></i>
+          </button>
+
+          <a href="https://www.linkedin.com/in/rossgoodburn/" target="_blank" class="px-5 py-3 rounded-xl bg-slate-900 border border-slate-700 hover:border-blue-500 text-white text-xs sm:text-sm font-semibold flex items-center space-x-2 transition-all">
+            <i class="fa-brands fa-linkedin text-blue-400"></i>
+            <span>LinkedIn Profile</span>
+          </a>
+
+        </div>
+
+        <!-- Download Action -->
+        <div class="pt-6">
+          <a href="mailto:ross.goodburn@gmail.com?subject=Interview%20Invitation%20-%20Snyk%20Channel%20Manager%20UK%26I" class="inline-flex items-center space-x-3 px-8 py-4 rounded-xl bg-snyk-purple hover:bg-snyk-purpleHover text-white font-bold text-sm purple-glow transition-all">
+            <span>Schedule Conversation with Ross</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="pt-12 text-xs text-slate-600 font-mono">
+          Ross Goodburn &bull; Portfolio configured for Snyk Talent & Regional Channel Leadership (UK&I) &bull; Ref: 96b70a9a
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Script for Interactive Components -->
+  <script>
+    // Accordion Toggle Logic
+    function toggleAccordion(id) {
+      const content = document.getElementById(id + '-content');
+      const icon = document.getElementById(id + '-icon');
+      
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      } else {
+        content.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      }
+    }
+
+    // Filter Partner Network
+    function filterPartners(category) {
+      const items = document.querySelectorAll('.partner-item');
+      const buttons = document.querySelectorAll('.partner-filter-btn');
+
+      // Update active button styling
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-filter') === category) {
+          btn.classList.add('bg-snyk-purple', 'text-white');
+          btn.classList.remove('bg-slate-900', 'text-slate-300');
+        } else {
+          btn.classList.remove('bg-snyk-purple', 'text-white');
+          btn.classList.add('bg-slate-900', 'text-slate-300');
+        }
+      });
+
+      // Filter cards
+      items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Reliable Clipboard Copy for Web Environments
+    function copyToClipboard(text, message) {
+      const tempInput = document.createElement('textarea');
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand('copy');
+        showToast(message || 'Copied to clipboard!');
+      } catch (err) {
+        console.error('Copy failed', err);
+      }
+      document.body.removeChild(tempInput);
+    }
+
+    // Toast Notification
+    function showToast(text) {
+      const toast = document.getElementById('toast');
+      const toastText = document.getElementById('toast-text');
+      toastText.innerText = text;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
